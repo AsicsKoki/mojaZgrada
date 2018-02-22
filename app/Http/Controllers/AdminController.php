@@ -14,12 +14,20 @@ class AdminController extends Controller
 {
     //
 
-    public function getInvoices()
+    public function getInvoices(Building $building)
     {
         //Ne treba sve usere da uzme vec one za koju zgradu admin hoce da salje
         //Treba da se zna building_id za koji se salji racuni
-        $users = User::all();
-        return view('admin.invoices')->with('users',$users);
+        $admin = Admin::where('id', Session::get('admin')->id)->first();
+        if($building->admin_id==$admin->id)
+        {
+            $users = User::where('building_id',$building->id)->get();
+            return view('admin.invoices')->with('users',$users);
+        }
+        else
+        {
+            return redirect('/adminDashboard');
+        }
     }
 
     public function getEditUsers()
@@ -58,7 +66,12 @@ class AdminController extends Controller
         return redirect()->route('getEditUserAccounts');
     }
 
-
+    public function getAdminDashboard()
+    {
+        $admin = Admin::where('id', Session::get('admin')->id)->first();
+        $buildings=$admin->buildings;
+        return view('admin.dashboard')->with("buildings",$buildings);
+    }
 
 
 

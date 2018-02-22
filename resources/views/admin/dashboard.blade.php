@@ -3,7 +3,9 @@
 @section('content')
 <div class="container">
 
-    <a href="{{ route('getInvoices') }}"> Invoices </a>
+    @foreach($buildings as $building)
+        <a href="/{{ $building->id }}/invoices"> {{ $building->address }} Invoices </a>
+    @endforeach
     
 </div>
 @endsection

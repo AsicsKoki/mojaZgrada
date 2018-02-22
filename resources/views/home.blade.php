@@ -19,6 +19,9 @@
                     <div> 
                         <a href="{{ route('getRegisterBuilding') }}"> Buy a building plan </a>
                     </div>
+                    <div> 
+                        <a href="{{ route('getAdminDashboard') }}"> Dashboard </a>
+                    </div>
                 </div>
             </div>
         </div>
