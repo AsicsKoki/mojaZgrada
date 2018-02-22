@@ -6,13 +6,16 @@ use Illuminate\Http\Request;
 use App\Building as Building;
 use App\Admin as Admin;
 use App\User as User;
+use Illuminate\Support\Facades\Auth as Auth;
+use Session;
+
 
 class BuildingController extends Controller
 {
     //
     public function getRegisterBuilding()
     {
-        $admin = Admin::where('id' , Auth::guard('admin'))->first();
+        $admin = Admin::where('id', Session::get('admin')->id)->first();
         $aid = $admin->id;
         return view('building.register' , ['aid' => $aid]);
     }

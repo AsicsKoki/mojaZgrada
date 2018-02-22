@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('layouts.master')
 
 @section('content')
 
@@ -12,7 +12,7 @@
                     <form class="form-horizontal" method="POST" action="{{ route('postRegisterBuilding') }}">
                         {{ csrf_field() }}
 
-                        <input type="hidden" name="aid" value="{{aid}}">
+                        <input type="hidden" name="aid" value="{{ $aid }}">
 
                         <!-- address -->
 
