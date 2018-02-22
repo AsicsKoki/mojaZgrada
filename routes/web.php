@@ -52,7 +52,8 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-Route::get('/invoices', 'AdminController@getInvoices')->name('getInvoices');
+//Route::get('/invoices', 'AdminController@getInvoices')->name('getInvoices');
+Route::get('/{building}/invoices', 'AdminController@getInvoices');
 
 Route::get('/registerBuilding', 'BuildingController@getRegisterBuilding')->name('getRegisterBuilding');
 Route::post('/registerBuilding', 'BuildingController@postRegisterBuilding')->name('postRegisterBuilding');
