@@ -15,6 +15,8 @@ class AdminController extends Controller
 
     public function getInvoices()
     {
+        //Ne treba sve usere da uzme vec one za koju zgradu admin hoce da salje
+        //Treba da se zna building_id za koji se salji racuni
         $users = User::all();
         return view('admin.invoices')->with('users',$users);
     }
