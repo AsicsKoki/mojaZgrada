@@ -15,7 +15,7 @@ class AdminController extends Controller
 
     public function getInvoices()
     {
-        return view('invoices');
+        return view('admin.invoices');
     }
 
     public function getEditUsers()
