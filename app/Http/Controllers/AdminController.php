@@ -15,7 +15,8 @@ class AdminController extends Controller
 
     public function getInvoices()
     {
-        return view('admin.invoices');
+        $users = User::all();
+        return view('admin.invoices')->with('users',$users);
     }
 
     public function getEditUsers()

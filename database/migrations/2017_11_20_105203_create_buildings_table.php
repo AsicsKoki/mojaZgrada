@@ -10,6 +10,7 @@ class CreateBuildingsTable extends Migration {
 	{
 		Schema::create('buildings', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('admin_id');
 			$table->timestamps();
 			$table->softDeletes();
 			$table->string('username' , 50);
