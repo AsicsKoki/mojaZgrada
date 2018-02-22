@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Building as Building;
 use App\Admin as Admin;
 use App\User as User;
+use Session;
 use Illuminate\Support\Facades\Auth as Auth;
 
 
@@ -23,7 +24,7 @@ class AdminController extends Controller
 
     public function getEditUsers()
     {
-        $admin = Admin::where('id' , Auth::guard('admin'))->first();
+        $admin = Admin::where('id' , Session::get('admin')->id)->first();
         $building = $admin->building;
         return view('editusers' , ['building' => $building]);
     }

@@ -12,7 +12,7 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->softDeletes();
-			$table->integer('building_id')->unsigned();
+			$table->integer('building_id')->unsigned()->default(0);
 			$table->string('username', 50);			
 			$table->string('first_name', 50);
 			$table->string('last_name', 50);
@@ -29,6 +29,6 @@ class CreateUsersTable extends Migration {
 
 	public function down()
 	{
-		Schema::dropIfExists('user');
+		Schema::dropIfExists('users');
 	}
 }
