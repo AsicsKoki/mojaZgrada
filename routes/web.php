@@ -52,6 +52,14 @@ Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail'
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
+//Admin building dashboard
+Route::get('/{building}/posts','PostsController@index');
+Route::post('/{building}/posts','PostsController@store');
+Route::get('/{building}/posts/create','PostsController@create');
+Route::get('/{building}/posts/{post}/edit','PostsController@edit');
+Route::patch('/{building}/posts/{post}','PostsController@update');
+Route::delete('/{building}/posts/{post}','PostsController@destroy');
+
 //Route::get('/invoices', 'AdminController@getInvoices')->name('getInvoices');
 Route::get('/{building}/invoices', 'AdminController@getInvoices');
 
