@@ -35,5 +35,5 @@
 @endsection
 
 @section('scripts') 
-    <script src="js/custom.js"></script>
+    <script src="/js/custom.js"></script>
 @endsection

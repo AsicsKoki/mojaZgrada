@@ -45,4 +45,9 @@ class Building extends Model
     {
         return $this->hasOne('App\Account');
     }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class)->orderby('pinned','desc')->orderby('created_at','desc');
+    }
 }
