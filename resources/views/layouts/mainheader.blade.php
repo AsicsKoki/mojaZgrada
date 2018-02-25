@@ -12,19 +12,19 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" rel="stylesheet"> -->
 </head>
 <body>
     <div id="root">
-    <section class="hero is-success ">
+    <section class="hero is-dark is-bold ">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <header class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item">
+          <router-link to="/" class="navbar-item">
             <h1>Moja Zgrada</h1>
-          </a>
+          </router-link>
           <span class="navbar-burger burger" data-target="navbarMenuHeroC">
             <span></span>
             <span></span>
@@ -73,6 +73,15 @@
         </router-link>
           <router-link tag="li" to="/plan">
              <a>Plan ciscenja</a>  
+        </router-link>
+        <router-link tag="li" to="/stanari">
+             <a>Stanari</a>  
+        </router-link>
+        <router-link tag="li" to="/gazda">
+             <a>Gazda</a>  
+        </router-link>
+        <router-link tag="li" to="/ostalo">
+             <a>Ostalo</a>  
         </router-link>
         </ul>
       </div>
