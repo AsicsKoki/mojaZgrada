@@ -19,6 +19,10 @@
                     <div> 
                         <a href="{{ route('getRegisterBuilding') }}"> Buy a building plan </a>
                     </div>
+                    <div id="app">
+                    @{{name}}, @{{lastName}}
+                        <example></example>
+                    </div>
                 </div>
             </div>
         </div>

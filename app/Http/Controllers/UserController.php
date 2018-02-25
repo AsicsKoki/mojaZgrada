@@ -13,6 +13,11 @@ class UserController extends Controller
         return view('home');
     }
 
+    public function zgradaFE()
+    {
+        return view('zgradaFE');
+    }
+
     public function get404()
     {
         return view('404');
