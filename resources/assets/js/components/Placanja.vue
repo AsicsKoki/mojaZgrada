@@ -1,16 +1,17 @@
 <template>
-<section class="hero is-primary">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">
-       Placanja
-      </h1>
-      <h2 class="subtitle">
-        Primary subtitle
-      </h2>
+    <section class="hero is-light is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+        Racuni
+        </h1>
+        <h2 class="subtitle">
+          Primary subtitle
+        </h2>
+
+      </div>
     </div>
-  </div>
-</section>
+    </section>
 </template>
 
 <script>
