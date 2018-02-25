@@ -19,6 +19,7 @@ Route::get('/', function () {
 // Auth::routes();
 
 Route::get('/home', 'UserController@index')->name('home');
+Route::get('/mz', 'UserController@zgradaFE')->name('zgradaFE');
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -51,6 +52,14 @@ Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm'
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+
+//Admin building dashboard
+Route::get('/{building}/posts','PostsController@index');
+Route::post('/{building}/posts','PostsController@store');
+Route::get('/{building}/posts/create','PostsController@create');
+Route::get('/{building}/posts/{post}/edit','PostsController@edit');
+Route::patch('/{building}/posts/{post}','PostsController@update');
+Route::delete('/{building}/posts/{post}','PostsController@destroy');
 
 //Route::get('/invoices', 'AdminController@getInvoices')->name('getInvoices');
 Route::get('/{building}/invoices', 'AdminController@getInvoices');

@@ -14,6 +14,11 @@ class AdminController extends Controller
 {
     //
 
+    public function __constructor()
+    {
+        //middleware za admina samo
+    }
+
     public function getInvoices(Building $building)
     {
         //Ne treba sve usere da uzme vec one za koju zgradu admin hoce da salje
