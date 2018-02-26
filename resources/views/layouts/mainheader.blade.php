@@ -16,16 +16,16 @@
 </head>
 <body>
     <div id="root">
-    <section class="hero is-dark is-bold ">
+    <section class="hero is-info is-bold ">
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <header class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <router-link to="/" class="navbar-item">
-            <h1>Moja Zgrada</h1>
+          <h1>Moja Zgrada</h1>
           </router-link>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+          <span class="navbar-burger burger" data-target="navbarMenuHeroC" @click="changeMenu" :class="{ 'is-active' : respNavActive}">
             <span></span>
             <span></span>
             <span></span>
@@ -52,40 +52,17 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        Moja
+        Moja Zgrada
       </h1>
       <h2 class="subtitle">
-        Zgrada
+        menadzer tvoje zgrade
       </h2>
     </div>
   </div>
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
-      <div class="container">
-        <ul>
-          <router-link tag="li" to="/placanja">
-             <a>Racuni</a>  
-        </router-link>
-          <router-link tag="li" to="/dugovanja">
-             <a>Dugovanja</a>     
-        </router-link>
-          <router-link tag="li" to="/plan">
-             <a>Plan ciscenja</a>  
-        </router-link>
-        <router-link tag="li" to="/stanari">
-             <a>Stanari</a>  
-        </router-link>
-        <router-link tag="li" to="/gazda">
-             <a>Gazda</a>  
-        </router-link>
-        <router-link tag="li" to="/ostalo">
-             <a>Ostalo</a>  
-        </router-link>
-        </ul>
-      </div>
-    </nav>
+  <navbar></navbar>
   </div>
 </section>
 
@@ -95,5 +72,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

@@ -11507,3 +11507,68 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+.navbar-brand a {
+  background-color: transparent !important;
+}
+
+.navbar-item img {
+  max-height: 301px;
+  position: fixed;
+  margin-top: 14px;
+  left: 0%;
+  top: -45px;
+}
+
+.tabs li {
+  display: block;
+  background: #ddddddbf;
+  color: #000;
+}
+
+.hero-foot {
+  position: relative;
+  z-index: 3;
+}
+
+.user_seen {
+  position: absolute;
+  right: 5%;
+}
+
+.message {
+  padding-top: 15px;
+}
+
+.message-footer {
+  height: 36px;
+  line-height: 36px;
+}
+
+.message-footer .message-body {
+  padding: 5px 1.25em !important;
+}
+
+.message-footer .button {
+  border: solid 1px #ddd;
+}
+
+.notification.is-primary {
+  position: fixed;
+  top: 100%;
+  right: 0%;
+  opacity: 0;
+  display: none;
+}
+
+.notification.is-danger {
+  position: fixed;
+  top: 100%;
+  right: 0%;
+  opacity: 0;
+  display: none;
+}
+
+#root {
+  background: aliceblue;
+}
+

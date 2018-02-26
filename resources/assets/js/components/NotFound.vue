@@ -3,7 +3,7 @@
   <div class="hero-body">
     <div class="container">
       <h1 class="title">
-          Ostalo
+          The page you are looking for was not found
       </h1>
       <h2 class="subtitle">
         Primary subtitle

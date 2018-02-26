@@ -2,12 +2,22 @@ require('./bootstrap');
 import router from './routes';
 
 
+Vue.component('navbar', require('./components/User/Navbar').default);
+Vue.component('message', require('./components/User/Objave/Message').default);
 
-Vue.component('placanja', require('./components/Placanja'));
-Vue.component('dugovanja', require('./components/Dugovanja'));
-Vue.component('plan', require('./components/Plan'));
+
 
 const app = new Vue({
     el: '#root',
-    router
+    data: {
+        respNavActive: false
+    },
+    router,
+    methods: {
+        changeMenu() {
+            this.respNavActive = !this.respNavActive;
+        },
+    }
+
+
 });
