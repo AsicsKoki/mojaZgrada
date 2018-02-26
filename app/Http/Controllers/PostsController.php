@@ -57,7 +57,7 @@ class PostsController extends Controller
             'building_id' => $building->id
         ]);
 
-        return rediredct("/".$building_.id."posts");
+        return redirect("/".$building->id."/posts");
     }
 
     /**
